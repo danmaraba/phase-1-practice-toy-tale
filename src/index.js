@@ -72,9 +72,9 @@ function displayCharacters(character){
     .then(toy => console.log(toy))
   }
   
-  getAllToys()
+  acquireAllToys()
 
-  function getAllToys(){
+  function acquireAllToys(){
     fetch('http://localhost:3000/toys')
     .then(res => res.json())
     .then(toyData => toyData.forEach(toy => displayCharacters(toy) ))
